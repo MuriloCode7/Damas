@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("./media/background.jpg");
+  display: flex;
+  justify-content: center;
+}
+
+#board {
+  background-color: white;
+  height: 80vh;
+  width: 80vh;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap; /* Usado para quebrar as linhas quando os elementos internos chegam a borda */
+  box-shadow: 0 0 3vh 3vh rgba(0, 0, 0, 0.8);
+  border: 1vh solid rgb(69, 64, 64);
+}
+
+.row.even .row.odd {
+  height: 10vh;
+  width: 80vh;
+}
+
+.row.even :nth-child(even) {
+  height: 10vh;
+  width: 10vh;
+  background-color: black;
+}
+
+.row.even :nth-child(odd) {
+  height: 10vh;
+  width: 10vh;
+  background-color: white;
+}
+
+.row.odd :nth-child(even) {
+  height: 10vh;
+  width: 10vh;
+  background-color: white;
+}
+
+.row.odd :nth-child(odd) {
+  height: 10vh;
+  width: 10vh;
+  background-color: black;
+}
