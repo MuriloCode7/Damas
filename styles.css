@@ -10,38 +10,51 @@ body {
   background-color: white;
   height: 80vh;
   width: 80vh;
-  align-self: center;
+  margin-top: 10vh;
   display: flex;
-  flex-wrap: wrap; /* Usado para quebrar as linhas quando os elementos internos chegam a borda */
+  /* flex-wrap: wrap; Usado para quebrar as linhas quando os elementos internos chegam a borda */
   box-shadow: 0 0 3vh 3vh rgba(0, 0, 0, 0.8);
   border: 1vh solid rgb(69, 64, 64);
 }
 
-.row.even .row.odd {
+.col.even .col.odd {
   height: 10vh;
   width: 80vh;
 }
 
-.row.even :nth-child(even) {
+.col.even :nth-child(even),
+.col.odd :nth-child(odd) {
+  height: 10vh;
+  width: 10vh;
+  background-color: cornsilk;
+}
+
+.col.even :nth-child(odd),
+.col.odd :nth-child(even) {
   height: 10vh;
   width: 10vh;
   background-color: black;
 }
 
-.row.even :nth-child(odd) {
+.cell {
+  display: flex;
   height: 10vh;
   width: 10vh;
-  background-color: white;
+  justify-content: center;
 }
 
-.row.odd :nth-child(even) {
-  height: 10vh;
-  width: 10vh;
-  background-color: white;
+#pieceDark {
+  background-image: url("./media/pieceDark.png");
+  background-repeat: round;
+  height: 8vh;
+  width: 8vh;
+  border-radius: 50%;
 }
 
-.row.odd :nth-child(odd) {
-  height: 10vh;
-  width: 10vh;
-  background-color: black;
+#pieceLight {
+  background-image: url("./media/pieceLight.png");
+  background-repeat: round;
+  height: 8vh;
+  width: 8vh;
+  border-radius: 50%;
 }
